@@ -13,8 +13,7 @@
 10. [Gợi ý mở rộng](#gợi-ý-mở-rộng)
 
 ---
-
-## ✅ Yêu cầu hệ thống
+1. ✅ Yêu cầu hệ thống
 
 - Hệ điều hành: Windows 10/11 hoặc macOS
 - Java JDK 11+ (nên dùng JDK 17 hoặc 21)
@@ -25,9 +24,9 @@
 
 ---
 
-## ⚙️ Cài đặt các công cụ cần thiết
+2. ⚙️ Cài đặt các công cụ cần thiết
 
-### 1. Cài Java & Maven
+2.1. Cài Java & Maven
 
 - Cài JDK: https://adoptium.net
 - Cài Maven: https://maven.apache.org
@@ -35,7 +34,7 @@
 ```bash
 java -version
 mvn -version
-2. Cài Node.js và Appium
+2.2. Cài Node.js và Appium
 bash
 Sao chép
 Chỉnh sửa
@@ -46,10 +45,10 @@ bash
 Sao chép
 Chỉnh sửa
 appium -v
-3. Cài Appium Inspector (GUI)
+2.3. Cài Appium Inspector (GUI)
 Tải tại: https://github.com/appium/appium-inspector/releases
 
-📁 Cấu trúc dự án
+3. Cấu trúc dự án
 bash
 Sao chép
 Chỉnh sửa
@@ -63,7 +62,8 @@ AppiumAndroid/
 │       │   └── tests/       # Chứa các file test
 │       └── resources/
 │           └── testng.xml   # File cấu hình test suite
-📦 Thêm dependency vào Maven
+
+4. Thêm dependency vào Maven
 Trong file pom.xml, thêm các thư viện sau:
 
 xml
@@ -110,13 +110,13 @@ Chỉnh sửa
 http://127.0.0.1:4723
 Bạn có thể kiểm tra log tại terminal để xác nhận server hoạt động.
 
-📱 Thiết lập thiết bị Android
-1. Cắm thiết bị hoặc mở emulator
+6. Thiết lập thiết bị Android
+6.1. Cắm thiết bị hoặc mở emulator
 bash
 Sao chép
 Chỉnh sửa
 adb devices
-2. Xác định appPackage & appActivity
+6.2. Xác định appPackage & appActivity
 bash
 Sao chép
 Chỉnh sửa
@@ -127,7 +127,7 @@ appPackage: ftel.cmr.enterprise
 
 appActivity: vn.fpt.camera.ui.main.MainActivity
 
-🔧 Cấu hình BaseTest
+7. Cấu hình BaseTest
 Tạo file BaseTest.java trong src/test/java/base/ và thiết lập các capability như:
 
 deviceName
@@ -144,7 +144,7 @@ noReset
 
 Dùng class UiAutomator2Options để khởi tạo AndroidDriver.
 
-▶️ Chạy test
+8. Chạy test
 1. Chạy qua TestNG XML
 bash
 Sao chép
