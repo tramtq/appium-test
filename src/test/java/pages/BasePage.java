@@ -1,8 +1,6 @@
 package pages;
 
-import io.appium.java_client.AppiumBy;
-import io.appium.java_client.android.AndroidDriver;
-import org.openqa.selenium.WebElement;
+import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
 
@@ -10,12 +8,12 @@ import java.time.Duration;
 import java.util.Arrays;
 
 public class BasePage {
-    protected AndroidDriver driver;
+    protected final AppiumDriver driver;
 
-    public BasePage(AndroidDriver driver) {
+    public BasePage(AppiumDriver driver) {
         this.driver = driver;
     }
-
+    //Android
     public void tapOutsideInput() {
         int width = driver.manage().window().getSize().getWidth();
         int height = driver.manage().window().getSize().getHeight();

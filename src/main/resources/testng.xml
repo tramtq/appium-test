@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="SuiteWithListener">
+    <listeners>
+        <listener class-name="utils.ExcelReporter" />
+    </listeners>
+    <test name="Login Tests">
+        <classes>
+            <class name="testcases.LoginTest"/>
+            <!-- Thêm class ở đây !-->
+        </classes>
+    </test>
+</suite>
